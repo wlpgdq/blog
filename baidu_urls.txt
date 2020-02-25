@@ -1,1 +1,2 @@
-http://yoursite.com/hexo-study.html
+http://yoursite.com/hexo-deploy.html
+http://yoursite.com/hexo-start.html
