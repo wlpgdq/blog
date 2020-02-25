@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 前端blog   # 博客名称
-subtitle: 开心每一天^@^ # 博客子标题
-description: 热衷于记录、分享前端开发技术 # 作者描述
-keywords: 前端,前端开发,css,html,js,css3,前端开发博客,fe,技术文档 # 站点关键词，用于搜素优化
+title: 静-前端   # 博客名称
+subtitle: 每一天都在匍匐前进 # 博客子标题
+description: 记录，展现自己 # 作者描述
+keywords: 前端开发博客,前端开发,框架学习 # 站点关键词，用于搜素优化
 author: Wweij # 博主名
 language: zh-CN # 站点语言
 timezone: Asia/Shanghai # 时区
@@ -18,7 +18,8 @@ timezone: Asia/Shanghai # 时区
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # url: https://blog.flqin.com   # 你的域名，如果有 
-root: /
+# 网站根目录，部署到github下blog仓库的gh-pages分支
+root: /blog/
 permalink: :title.html
 # permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -178,6 +179,7 @@ baidu_url_submit:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
-    repo: git@github.com:wlpgdq/myblog.github.io.git
-    branch: master
+    # repo: git@github.com:wlpgdq/blog.github.io.git
+    repo: https://github.com/wlpgdq/blog.git
+    branch: gh-pages
   - type: baidu_url_submitter # 百度

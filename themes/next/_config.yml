@@ -409,7 +409,7 @@ reward_settings:
 # 捐赠二维码
 reward:
   wechatpay: /images/wechatpay.png
-  alipay: /images/alipay.png
+  # alipay: /images/alipay.png
   #bitcoin: /images/bitcoin.png
 
 # Related popular posts
