@@ -1,2 +1,4 @@
+http://yoursite.com/vuepress.html
+http://yoursite.com/share001.html
 http://yoursite.com/hexo-deploy.html
 http://yoursite.com/hexo-start.html

@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>Vuepress环境搭建和部署</title>
+      <link href="/blog/vuepress.html"/>
+      <url>/blog/vuepress.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Vuepress-环境搭建"><a href="#Vuepress-环境搭建" class="headerlink" title="Vuepress 环境搭建"></a>Vuepress 环境搭建</h1><p>Vuepress官网：<a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener">https://vuepress.vuejs.org/</a><br>推荐一个不错的技术笔记：<a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" rel="noopener">https://zhousiwei.gitee.io/ibooks/</a></p><h2 id="懒人方法："><a href="#懒人方法：" class="headerlink" title="懒人方法："></a>懒人方法：</h2><ul><li><p>从github官网下载Vuepress: <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener">https://github.com/vuejs/vuepress</a><br>下载完成后，在目录：packages-&gt; docs，其中docs就是Vuepress文档网站源码</p></li><li><p>运行<br>将docs文件夹copy到自己的工作目录<br>cd docs<br>npm install<br>npm run dev<br>本地打开项目：<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p></li></ul><h2 id="一般方法："><a href="#一般方法：" class="headerlink" title="一般方法："></a>一般方法：</h2><p>参考官网：<a href="https://www.vuepress.cn/guide/getting-started.html" target="_blank" rel="noopener">https://www.vuepress.cn/guide/getting-started.html</a></p><h2 id="一些问题解决方法"><a href="#一些问题解决方法" class="headerlink" title="一些问题解决方法"></a>一些问题解决方法</h2><h3 id="如何修改Vuepress运行的ip和端口"><a href="#如何修改Vuepress运行的ip和端口" class="headerlink" title="如何修改Vuepress运行的ip和端口"></a>如何修改Vuepress运行的ip和端口</h3><p>在config.js中配置：<br>host<br>类型: string<br>默认值: ‘0.0.0.0’<br>指定用于 dev server 的主机名。</p><p>port<br>类型: number<br>默认值: 8080<br>指定 dev server 的端口</p><h3 id="md文件中显示图片的方法"><a href="#md文件中显示图片的方法" class="headerlink" title=".md文件中显示图片的方法"></a>.md文件中显示图片的方法</h3><ul><li>一般情况下：</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![doc目录](/doc.png)</span><br></pre></td></tr></table></figure><ul><li>config.js中设置了base的情况下：</li></ul><p>如果你的网站会被部署到一个非根路径，你将需要在 .vuepress/config.js 中设置 base，举例来说，如果你打算将你的网站部署到 <a href="https://foo.github.io/bar/，那么" target="_blank" rel="noopener">https://foo.github.io/bar/，那么</a> base 的值就应该被设置为 “/bar/“ (应当总是以斜杠开始，并以斜杠结束)。</p><p>有了基础路径（Base URL），如果你希望引用一张放在 .vuepress/public 中的图片，你需要使用这样路径：/bar/image.png，然而，一旦某一天你决定去修改 base，这样的路径引用将会显得异常脆弱。为了解决这个问题，VuePress 提供了内置的一个 helper $withBase（它被注入到了 Vue 的原型上），可以帮助你生成正确的路径。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img :src=&quot;$withBase(&apos;/doc.png&apos;)&quot; alt=&quot;doc目录&quot;&gt;</span><br></pre></td></tr></table></figure><h3 id="Markdown中的自定义容器"><a href="#Markdown中的自定义容器" class="headerlink" title="Markdown中的自定义容器"></a>Markdown中的自定义容器</h3><p>输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">::: tip</span><br><span class="line">这是一个提示</span><br><span class="line">:::</span><br><span class="line"></span><br><span class="line">::: warning</span><br><span class="line">这是一个警告</span><br><span class="line">:::</span><br><span class="line"></span><br><span class="line">::: danger</span><br><span class="line">这是一个危险警告</span><br><span class="line">:::</span><br><span class="line"></span><br><span class="line">::: details</span><br><span class="line">这是一个详情块，在 IE / Edge 中不生效</span><br><span class="line">:::</span><br></pre></td></tr></table></figure><p>输出：<br><img src="/blog/images/output.jpg" alt="output"></p><h1 id="Vuepress-部署"><a href="#Vuepress-部署" class="headerlink" title="Vuepress 部署"></a>Vuepress 部署</h1><p>文档放置在项目的 docs 目录中；<br>使用的是默认的构建输出位置；<br>VuePress 以本地依赖的形式被安装到你的项目中，并且配置了如下的 npm scripts:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"docs:build"</span>: <span class="string">"vuepress build docs"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ul><li><p>部署到github page下</p><ul><li><p>在 docs/.vuepress/config.js 中设置正确的 base<br>如果你打算发布到 https://<username>.github.io/，则可以省略这一步，因为 base 默认即是 “/“。<br>如果你打算发布到 https://<username>.github.io/<repo>/（也就是说你的仓库在 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><username>/<repo>），则将 base 设置为 “/<repo>/“。</repo></repo></username></repo></username></username></p></li><li><p>在你的项目中，创建一个如下的 deploy.sh 文件（请自行判断去掉高亮行的注释）:</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env sh</span><br><span class="line"></span><br><span class="line"># 确保脚本抛出遇到的错误</span><br><span class="line">set -e</span><br><span class="line"></span><br><span class="line"># 生成静态文件</span><br><span class="line">npm run docs:build</span><br><span class="line"></span><br><span class="line"># 进入生成的文件夹</span><br><span class="line">cd docs/.vuepress/dist</span><br><span class="line"></span><br><span class="line"># 如果是发布到自定义域名</span><br><span class="line"># echo &apos;www.example.com&apos; &gt; CNAME</span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &apos;deploy&apos;</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.github.io</span><br><span class="line"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;</span><br><span class="line"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;REPO&gt;.git master:gh-pages</span><br><span class="line"></span><br><span class="line">cd -</span><br></pre></td></tr></table></figure><p>你可以在你的持续集成的设置中，设置在每次 push 代码时自动运行上述脚本</p></li><li><p>部署到tomcat下</p></li></ul><p>直接将生成的dist文件夹下的类容copy到tomcat下例如/vuepressDemo文件夹下，同理也需要在打包之前将base改为vuepressDemo，这样部署之后才能正常访问</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vuepress </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>心灵之行</title>
+      <link href="/blog/share001.html"/>
+      <url>/blog/share001.html</url>
+      
+        <content type="html"><![CDATA[<!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --><!-- 其中 class="blockquote-center" 是必须的 --><!-- <blockquote class="blockquote-center">blah blah blah</blockquote> --><!-- 标签 方式，要求版本在0.4.5或以上 --><!-- <blockquote class="blockquote-center"><p>blah blah blah</p></blockquote> --><!-- 标签别名 --><!-- <blockquote class="blockquote-center"><p>blah blah blah </p></blockquote> --><blockquote class="blockquote-center"><p>在岁月之巅放牧心灵，山一程，水一程，红尘、沧桑、流年、清欢，一个人的夜晚，我们终于学会了：于一杯淡泊中，笑望两个人的白月光。</p></blockquote><!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --><!-- 其中 class="full-image" 是必须的 --><!-- <img src="/image-url" class="full-image" /> --><!-- 标签 方式，要求版本在0.4.5或以上 --><!-- <span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/image-url" class="full-image" alt="alt" title="title" /><meta itemprop="width" content="auto"/><meta itemprop="height" content="auto"/></span> --><!-- 别名 --><!-- <span itemprop="image" itemscope itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/image-url" class="full-image" alt="alt" title="title" /><meta itemprop="width" content="auto"/><meta itemprop="height" content="auto"/></span> --><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3724442178,3053869615&fm=26&gp=0.jpg" class="full-image"><blockquote class="blockquote-center"><p>小桥湖畔，曾经的杨柳依依挽留不住岁月的脚步，在季节的身前悠悠转身，将满怀秋愁傲慢的丢入秋水，唯留一份铅华落尽的素淡。</p></blockquote><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3668567841,2050262117&fm=26&gp=0.jpg" class="full-image"><!-- default\primary\success\info\warning\danger --><!-- <div class="note info">            <p>info </p>          </div> -->]]></content>
+      
+      
+      <categories>
+          
+          <category> 每日一“享” </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阅读 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>hexo 部署</title>
       <link href="/blog/hexo-deploy.html"/>
       <url>/blog/hexo-deploy.html</url>
@@ -13,7 +63,7 @@
       
       <categories>
           
-          <category> hexo </category>
+          <category> 前端 </category>
           
       </categories>
       
@@ -38,7 +88,7 @@
       
       <categories>
           
-          <category> hexo </category>
+          <category> 前端 </category>
           
       </categories>
       

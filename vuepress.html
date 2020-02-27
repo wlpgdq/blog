@@ -109,17 +109,20 @@
 
 
 
-  <meta name="description" content="记录，展现自己">
-<meta name="keywords" content="前端开发博客,前端开发,框架学习">
-<meta property="og:type" content="website">
-<meta property="og:title" content="静-前端">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Vuepress 环境搭建Vuepress官网：https://vuepress.vuejs.org/推荐一个不错的技术笔记：https://zhousiwei.gitee.io/ibooks/ 懒人方法： 从github官网下载Vuepress: https://github.com/vuejs/vuepress下载完成后，在目录：packages-&amp;gt; docs，其中docs就是Vuepr">
+<meta name="keywords" content="Vuepress">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vuepress环境搭建和部署">
+<meta property="og:url" content="http://yoursite.com/vuepress.html">
 <meta property="og:site_name" content="静-前端">
-<meta property="og:description" content="记录，展现自己">
+<meta property="og:description" content="Vuepress 环境搭建Vuepress官网：https://vuepress.vuejs.org/推荐一个不错的技术笔记：https://zhousiwei.gitee.io/ibooks/ 懒人方法： 从github官网下载Vuepress: https://github.com/vuejs/vuepress下载完成后，在目录：packages-&amp;gt; docs，其中docs就是Vuepr">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/blog/images/output.jpg">
+<meta property="og:updated_time" content="2020-02-27T07:13:42.750Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="静-前端">
-<meta name="twitter:description" content="记录，展现自己">
+<meta name="twitter:title" content="Vuepress环境搭建和部署">
+<meta name="twitter:description" content="Vuepress 环境搭建Vuepress官网：https://vuepress.vuejs.org/推荐一个不错的技术笔记：https://zhousiwei.gitee.io/ibooks/ 懒人方法： 从github官网下载Vuepress: https://github.com/vuejs/vuepress下载完成后，在目录：packages-&amp;gt; docs，其中docs就是Vuepr">
+<meta name="twitter:image" content="http://yoursite.com/blog/images/output.jpg">
 
 
 
@@ -127,7 +130,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/vuepress">
 
 
 
@@ -137,7 +140,7 @@
   };
 </script>
 
-  <title>静-前端</title>
+  <title>Vuepress环境搭建和部署 | 静-前端</title>
   
 
 
@@ -185,8 +188,7 @@
     
   
 
-  <div class="container sidebar-position-right 
-  page-home">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -406,9 +408,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -416,6 +418,8 @@
   
   
 
+  
+    <div class="reading-progress-bar"></div>
   
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
@@ -440,10 +444,8 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/blog/vuepress.html" class="post-title-link" itemprop="url">Vuepress环境搭建和部署</a>
+          <h2 class="post-title" itemprop="name headline">Vuepress环境搭建和部署
+
               
             
           </h2>
@@ -553,24 +555,52 @@
       
 
       
-        
-          
-            <p>
-              Vuepress 环境搭建Vuepress官网：https://vuepress.vuejs.org/推荐一个不错的技术笔记：https://zhousiwei.gitee.io/ibooks/
-懒人方法：
-从github官网下载Vuepress: https://github.com/vuejs/
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/vuepress.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <h1 id="Vuepress-环境搭建"><a href="#Vuepress-环境搭建" class="headerlink" title="Vuepress 环境搭建"></a>Vuepress 环境搭建</h1><p>Vuepress官网：<a href="https://vuepress.vuejs.org/" target="_blank" rel="noopener">https://vuepress.vuejs.org/</a><br>推荐一个不错的技术笔记：<a href="https://zhousiwei.gitee.io/ibooks/" target="_blank" rel="noopener">https://zhousiwei.gitee.io/ibooks/</a></p>
+<h2 id="懒人方法："><a href="#懒人方法：" class="headerlink" title="懒人方法："></a>懒人方法：</h2><ul>
+<li><p>从github官网下载Vuepress: <a href="https://github.com/vuejs/vuepress" target="_blank" rel="noopener">https://github.com/vuejs/vuepress</a><br>下载完成后，在目录：packages-&gt; docs，其中docs就是Vuepress文档网站源码</p>
+</li>
+<li><p>运行<br>将docs文件夹copy到自己的工作目录<br>cd docs<br>npm install<br>npm run dev<br>本地打开项目：<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></p>
+</li>
+</ul>
+<h2 id="一般方法："><a href="#一般方法：" class="headerlink" title="一般方法："></a>一般方法：</h2><p>参考官网：<a href="https://www.vuepress.cn/guide/getting-started.html" target="_blank" rel="noopener">https://www.vuepress.cn/guide/getting-started.html</a></p>
+<h2 id="一些问题解决方法"><a href="#一些问题解决方法" class="headerlink" title="一些问题解决方法"></a>一些问题解决方法</h2><h3 id="如何修改Vuepress运行的ip和端口"><a href="#如何修改Vuepress运行的ip和端口" class="headerlink" title="如何修改Vuepress运行的ip和端口"></a>如何修改Vuepress运行的ip和端口</h3><p>在config.js中配置：<br>host<br>类型: string<br>默认值: ‘0.0.0.0’<br>指定用于 dev server 的主机名。</p>
+<p>port<br>类型: number<br>默认值: 8080<br>指定 dev server 的端口</p>
+<h3 id="md文件中显示图片的方法"><a href="#md文件中显示图片的方法" class="headerlink" title=".md文件中显示图片的方法"></a>.md文件中显示图片的方法</h3><ul>
+<li>一般情况下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![doc目录](/doc.png)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>config.js中设置了base的情况下：</li>
+</ul>
+<p>如果你的网站会被部署到一个非根路径，你将需要在 .vuepress/config.js 中设置 base，举例来说，如果你打算将你的网站部署到 <a href="https://foo.github.io/bar/，那么" target="_blank" rel="noopener">https://foo.github.io/bar/，那么</a> base 的值就应该被设置为 “/bar/“ (应当总是以斜杠开始，并以斜杠结束)。</p>
+<p>有了基础路径（Base URL），如果你希望引用一张放在 .vuepress/public 中的图片，你需要使用这样路径：/bar/image.png，然而，一旦某一天你决定去修改 base，这样的路径引用将会显得异常脆弱。为了解决这个问题，VuePress 提供了内置的一个 helper $withBase（它被注入到了 Vue 的原型上），可以帮助你生成正确的路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img :src=&quot;$withBase(&apos;/doc.png&apos;)&quot; alt=&quot;doc目录&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Markdown中的自定义容器"><a href="#Markdown中的自定义容器" class="headerlink" title="Markdown中的自定义容器"></a>Markdown中的自定义容器</h3><p>输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">::: tip</span><br><span class="line">这是一个提示</span><br><span class="line">:::</span><br><span class="line"></span><br><span class="line">::: warning</span><br><span class="line">这是一个警告</span><br><span class="line">:::</span><br><span class="line"></span><br><span class="line">::: danger</span><br><span class="line">这是一个危险警告</span><br><span class="line">:::</span><br><span class="line"></span><br><span class="line">::: details</span><br><span class="line">这是一个详情块，在 IE / Edge 中不生效</span><br><span class="line">:::</span><br></pre></td></tr></table></figure>
+
+<p>输出：<br><img src="/blog/images/output.jpg" alt="output"></p>
+<h1 id="Vuepress-部署"><a href="#Vuepress-部署" class="headerlink" title="Vuepress 部署"></a>Vuepress 部署</h1><p>文档放置在项目的 docs 目录中；<br>使用的是默认的构建输出位置；<br>VuePress 以本地依赖的形式被安装到你的项目中，并且配置了如下的 npm scripts:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"scripts"</span>: &#123;</span><br><span class="line">    <span class="string">"docs:build"</span>: <span class="string">"vuepress build docs"</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>部署到github page下</p>
+<ul>
+<li><p>在 docs/.vuepress/config.js 中设置正确的 base<br>如果你打算发布到 https://<username>.github.io/，则可以省略这一步，因为 base 默认即是 “/“。<br>如果你打算发布到 https://<username>.github.io/<repo>/（也就是说你的仓库在 <a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a><username>/<repo>），则将 base 设置为 “/<repo>/“。</repo></repo></username></repo></username></username></p>
+</li>
+<li><p>在你的项目中，创建一个如下的 deploy.sh 文件（请自行判断去掉高亮行的注释）:</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/env sh</span><br><span class="line"></span><br><span class="line"># 确保脚本抛出遇到的错误</span><br><span class="line">set -e</span><br><span class="line"></span><br><span class="line"># 生成静态文件</span><br><span class="line">npm run docs:build</span><br><span class="line"></span><br><span class="line"># 进入生成的文件夹</span><br><span class="line">cd docs/.vuepress/dist</span><br><span class="line"></span><br><span class="line"># 如果是发布到自定义域名</span><br><span class="line"># echo &apos;www.example.com&apos; &gt; CNAME</span><br><span class="line"></span><br><span class="line">git init</span><br><span class="line">git add -A</span><br><span class="line">git commit -m &apos;deploy&apos;</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.github.io</span><br><span class="line"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;USERNAME&gt;.github.io.git master</span><br><span class="line"></span><br><span class="line"># 如果发布到 https://&lt;USERNAME&gt;.github.io/&lt;REPO&gt;</span><br><span class="line"># git push -f git@github.com:&lt;USERNAME&gt;/&lt;REPO&gt;.git master:gh-pages</span><br><span class="line"></span><br><span class="line">cd -</span><br></pre></td></tr></table></figure>
+
+<p>你可以在你的持续集成的设置中，设置在每次 push 代码时自动运行上述脚本</p>
+</li>
+<li><p>部署到tomcat下</p>
+</li>
+</ul>
+<p>直接将生成的dist文件夹下的类容copy到tomcat下例如/vuepressDemo文件夹下，同理也需要在打包之前将base改为vuepressDemo，这样部署之后才能正常访问</p>
+
       
     </div>
 
@@ -582,6 +612,13 @@
 
     <div>
       
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">---- 本文结束，感谢您的阅读 ----</div>
+    
+</div>
+
+      
     </div>
     
 
@@ -589,460 +626,68 @@
       
     
     
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/blog/images/wechatpay.png" alt="Wweij 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
 
     
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/share001.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wweij">
-      <meta itemprop="description" content="记录，展现自己">
-      <meta itemprop="image" content="/blog/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="静-前端">
-    </span>
-
-    
-      <header class="post-header">
-
         
+          
         
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/blog/share001.html" class="post-title-link" itemprop="url">心灵之行</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-27 09:49:10 / 修改时间：15:14:23" itemprop="dateCreated datePublished" datetime="2020-02-27T09:49:10+08:00">2020-02-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/每日一“享”/" itemprop="url" rel="index"><span itemprop="name">每日一“享”</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/blog/tags/Vuepress/" rel="tag"># Vuepress</a>
           
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">120</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          
-            <p>
-              
-
-blah blah blah -->
-
-
-blah blah blah
- -->
-
-
-blah blah blah 
- -->
-在岁月之巅放牧心灵，山一程，水一程，红尘、沧桑、流年、清欢，一个人的夜晚，我们终于学会了：于一杯淡泊中，笑望两个人的白月光。
-
-
-
-
- -->
-
-
- -->
-
-
- --
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/share001.html#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/blog/share001.html" rel="next" title="心灵之行">
+                <i class="fa fa-chevron-left"></i> 心灵之行
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/hexo-deploy.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wweij">
-      <meta itemprop="description" content="记录，展现自己">
-      <meta itemprop="image" content="/blog/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="静-前端">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/blog/hexo-deploy.html" class="post-title-link" itemprop="url">hexo 部署</a>
-              
             
-          </h2>
-        
+          </div>
 
-        <div class="post-meta">
-          <span class="post-time">
+          <span class="post-nav-divider"></span>
 
+          <div class="post-nav-prev post-nav-item">
             
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-25 14:50:30" itemprop="dateCreated datePublished" datetime="2020-02-25T14:50:30+08:00">2020-02-25</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-27 15:12:46" itemprop="dateModified" datetime="2020-02-27T15:12:46+08:00">2020-02-27</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1.7k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">2 分钟</span>
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>
-              部署
-1.新建一个 repository。如果你希望你的站点能通过 &lt;你的 GitHub 用户名&gt;.github.io 域名访问，你的 repository 应该直接命名为 &lt;你的 GitHub 用户名&gt;.github.io。
-
-2.将你的 Hexo 站点文件夹推送到 rep
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/hexo-deploy.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1052,230 +697,19 @@ blah blah blah
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/blog/hexo-start.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wweij">
-      <meta itemprop="description" content="记录，展现自己">
-      <meta itemprop="image" content="/blog/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="静-前端">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/blog/hexo-start.html" class="post-title-link" itemprop="url">hexo 命令</a>
-              
-            
-          </h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-25 14:49:54" itemprop="dateCreated datePublished" datetime="2020-02-25T14:49:54+08:00">2020-02-25</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2020-02-27 15:12:49" itemprop="dateModified" datetime="2020-02-27T15:12:49+08:00">2020-02-27</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/blog/categories/前端/" itemprop="url" rel="index"><span itemprop="name">前端</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-symbolscount">
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数">1k</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">1 分钟</span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>
-              安装、升级、初始化npm install hexo -g # 安装npm update hexo -g #升级  hexo init #初始化
-
-简写hexo n &quot;我的博客&quot; == hexo new &quot;我的博客&quot; #新建文章hexo p == hexo pu
-              ...
-            </p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/blog/hexo-start.html#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    <div>
-      
-    </div>
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+    <div class="comments" id="gitalk-container">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -1295,8 +729,17 @@ blah blah blah
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1399,6 +842,23 @@ blah blah blah
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Vuepress-环境搭建"><span class="nav-number">1.</span> <span class="nav-text">Vuepress 环境搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#懒人方法："><span class="nav-number">1.1.</span> <span class="nav-text">懒人方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一般方法："><span class="nav-number">1.2.</span> <span class="nav-text">一般方法：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一些问题解决方法"><span class="nav-number">1.3.</span> <span class="nav-text">一些问题解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何修改Vuepress运行的ip和端口"><span class="nav-number">1.3.1.</span> <span class="nav-text">如何修改Vuepress运行的ip和端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#md文件中显示图片的方法"><span class="nav-number">1.3.2.</span> <span class="nav-text">.md文件中显示图片的方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown中的自定义容器"><span class="nav-number">1.3.3.</span> <span class="nav-text">Markdown中的自定义容器</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vuepress-部署"><span class="nav-number">2.</span> <span class="nav-text">Vuepress 部署</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1553,6 +1013,10 @@ blah blah blah
 
 
   
+  <script src="/blog/js/scrollspy.js?v=7.1.2"></script>
+<script src="/blog/js/post-details.js?v=7.1.2"></script>
+
+
 
   
 
@@ -1571,6 +1035,37 @@ blah blah blah
 
   
 
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '45dda90c29645d16e02a',
+    clientSecret: '3bc32826c97ee40822171195b4091aab98aff4bb',
+    repo: 'blog',
+    owner: 'wlpgdq',
+    admin: ['wlpgdq'],
+    id: md5(location.pathname),
+    
+      language: 'zh-CN',
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
 
 
   

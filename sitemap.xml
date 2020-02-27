@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/share001.html</loc>
+    
+    <lastmod>2020-02-27T07:14:23.576Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/vuepress.html</loc>
+    
+    <lastmod>2020-02-27T07:13:42.750Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/hexo-start.html</loc>
     
-    <lastmod>2020-02-25T07:02:57.856Z</lastmod>
+    <lastmod>2020-02-27T07:12:49.874Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/hexo-deploy.html</loc>
     
-    <lastmod>2020-02-25T06:52:03.902Z</lastmod>
+    <lastmod>2020-02-27T07:12:46.045Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/404/index.html</loc>
+    
+    <lastmod>2020-02-27T07:12:38.715Z</lastmod>
     
   </url>
   
