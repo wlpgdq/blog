@@ -2,7 +2,7 @@
 title: hexo 命令
 date: 2020-02-25 14:49:54
 categories:
-  - hexo
+  - 前端
 tags:
   - hexo
 ---

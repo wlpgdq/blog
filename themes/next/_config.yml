@@ -180,7 +180,7 @@ menu:
   archives: /archives/ || archive #归档
   # schedule: /schedule/ || calendar #时间表
   # sitemap: /sitemap.xml || sitemap #网站地图
-  # commonweal: /404/ || heartbeat  #公益404
+  commonweal: /404/ || heartbeat  #公益404
 
 # Enable / Disable menu icons / item badges.
 # 启用/禁用菜单图标/项目标志。

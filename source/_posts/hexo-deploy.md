@@ -2,7 +2,7 @@
 title: hexo 部署
 date: 2020-02-25 14:50:30
 categories:
-  - hexo
+  - 前端
 tags:
   - hexo
 ---
